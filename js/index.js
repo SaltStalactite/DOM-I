@@ -108,6 +108,14 @@ contactEmail.textContent = siteContent['contact']['email']
 const footerContent = document.querySelector('footer p');
 footerContent.textContent = siteContent['footer']['copyright']
 
-// const navElements = document.querySelectorAll('nav');
-// console.log(navElements)
-// navElements.style.color = 'green'
+const navElement = document.querySelector('nav');
+
+const appendedChild = document.createElement('a');
+appendedChild.textContent = 'AppendedChild';
+appendedChild.style.color = 'green';
+navElement.appendChild(appendedChild);
+
+const prependedChild = document.createElement('a');
+prependedChild.textContent = 'PrependedChild';
+prependedChild.style.color = 'green';
+navElement.prepend(prependedChild);
